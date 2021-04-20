@@ -15,10 +15,10 @@ class SearchBar extends React.Component {
         <h1 className="title">IronNutrition</h1>
         <div>
           <input
-            onChange={this.handleChange}
+            onChange={() => this.props.onChange(this.state.name)}
             type="text"
             className="input search-bar"
-            name="search"
+            name="name"
             placeholder="Search"
             value={this.state.name}
           />

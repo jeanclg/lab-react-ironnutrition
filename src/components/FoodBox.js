@@ -40,7 +40,13 @@ class FoodBox extends React.Component {
               <div className="control">
                 <button
                   className="button is-info"
-                  onClick={() => this.props.onClick(this.props)}
+                  onClick={() =>
+                    this.props.onClick({
+                      name: this.props.name,
+                      calories: this.props.calories,
+                      quantity: this.state.quantity,
+                    })
+                  }
                 >
                   +
                 </button>
